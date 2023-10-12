@@ -1,12 +1,20 @@
 const express = require('express');
+//fetch fix
+const cors = require('cors');
+
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+//fetch fix
+//midleware
+app.use(cors());
 
 const users = [
     { id: 1, name: 'John', email: 'john@example.com' },
     { id: 2, name: 'Alice', email: 'alice@example.com' },
     { id: 3, name: 'Bob', email: 'bob@example.com' },
-    { id: 4, name: 'Eva', email: 'eva@example.com' }
+
 ];
 
 
