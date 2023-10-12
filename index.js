@@ -21,8 +21,13 @@ const users = [
 app.get('/', (req, res) => {
     res.send('user management server is running')
 })
+
 app.get('/users', (req, res) => {
     res.send(users)
+})
+app.post('/users', (req, res) => {
+    console.log('post api hittng')
+    console.log(req.body)
 })
 
 app.listen(port, () => {
